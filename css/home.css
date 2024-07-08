@@ -60,6 +60,97 @@ nav ul li a:hover {
     color: #b0b0b0; /* Medium grey text */
 }
 
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #00bcd4;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #008c9e;
+    color: #fff;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+#about, #skills, #projects, #testimonials, #contact {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+    text-align: center;
+}
+
+#skills ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills ul li {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.project {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.project h3 {
+    color: #00bcd4;
+}
+
+.project a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #008c9e;
+}
+
+blockquote {
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 1rem;
+    border-left: 5px solid #00bcd4;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+blockquote footer {
+    color: #b0b0b0;
+    text-align: right;
+}
+
 footer {
     background-color: #1f1f1f; /* Darker footer */
     color: #e0e0e0; /* Light grey text */
@@ -67,3 +158,23 @@ footer {
     padding: 1rem;
 }
 
+footer .social-media {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .social-media li {
+    margin: 0 0.5rem;
+}
+
+footer .social-media a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #fff;
+}
