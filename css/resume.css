@@ -1,0 +1,124 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fira Code", monospace;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light grey text */
+}
+
+header {
+    background-color: #1f1f1f; /* Darker header */
+    color: #00bcd4; /* Light blue text */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #00bcd4; /* Light blue links */
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Darker hover effect */
+    color: #fff; /* White text on hover */
+}
+
+main {
+    padding: 2rem;
+    background-color: #1a1a1a; /* Slightly lighter dark for main content */
+    color: #e0e0e0; /* Light grey text */
+}
+
+.resume {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #222; /* Darker background for resume section */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+.resume h2 {
+    color: #00bcd4; /* Light blue heading */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.resume-section {
+    margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+    color: #00bcd4; /* Light blue subheadings */
+    margin-bottom: 0.5rem;
+}
+
+.resume-section p,
+.resume-section ul {
+    margin-bottom: 1rem;
+    color: #b0b0b0; /* Medium grey text */
+}
+
+.resume-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.skills-list li {
+    display: inline-block;
+    background-color: #333; /* Darker background for skills */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #00bcd4; /* Light blue text for skills */
+}
+
+.download-section {
+    text-align: center;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #00bcd4; /* Light blue button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color */
+}
+
+.download-button:hover {
+    background-color: #0097a7; /* Darker blue on hover */
+}
+
+footer {
+    background-color: #1f1f1f; /* Darker footer */
+    color: #e0e0e0; /* Light grey text */
+    text-align: center;
+    padding: 1rem;
+}
+
