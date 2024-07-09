@@ -19,6 +19,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeInDown 1s ease-out; /* Animation */
+}
+
+/* Animation for the entire nav bar */
+header nav {
+    animation: slideInRight 1s ease-out; /* Animation */
 }
 
 nav ul {
@@ -28,6 +34,7 @@ nav ul {
 
 nav ul li {
     margin-right: 1rem;
+    animation: fadeInUp 1s ease-out; /* Animation */
 }
 
 nav ul li a {
@@ -40,6 +47,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #333; /* Darker hover effect */
     color: #fff; /* White text on hover */
+    animation: pulse 1s infinite; /* Animation */
 }
 
 .intro {
@@ -47,17 +55,20 @@ nav ul li a:hover {
     padding: 4rem 0;
     background-color: #1a1a1a; /* Slightly lighter dark for main content */
     color: #e0e0e0; /* Light grey text */
+    animation: fadeIn 1s ease-out; /* Animation */
 }
 
 .intro h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #00bcd4; /* Light blue heading */
+    animation: slideInLeft 1s ease-out; /* Animation */
 }
 
 .intro p {
     font-size: 1.2rem;
     color: #b0b0b0; /* Medium grey text */
+    animation: slideInRight 1s ease-out; /* Animation */
 }
 
 .intro img {
@@ -65,6 +76,7 @@ nav ul li a:hover {
     height: auto;
     margin-top: 1rem;
     border-radius: 8px;
+    animation: zoomIn 1s ease-out; /* Animation */
 }
 
 .cta-button {
@@ -81,6 +93,7 @@ nav ul li a:hover {
 .cta-button:hover {
     background-color: #008c9e;
     color: #fff;
+    animation: pulse 1s infinite; /* Animation */
 }
 
 section {
@@ -91,6 +104,7 @@ section {
     background-color: #1a1a1a;
     color: #e0e0e0;
     margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out; /* Animation */
 }
 
 h2 {
@@ -98,6 +112,7 @@ h2 {
     margin-bottom: 1rem;
     color: #00bcd4;
     text-align: center;
+    animation: bounceIn 1s ease-out; /* Animation */
 }
 
 #skills ul {
@@ -113,6 +128,7 @@ h2 {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 5px;
+    animation: flipInX 1s ease-out; /* Animation */
 }
 
 .project {
@@ -121,6 +137,7 @@ h2 {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 8px;
+    animation: fadeInUp 1s ease-out; /* Animation */
 }
 
 .project h3 {
@@ -144,6 +161,7 @@ blockquote {
     border-left: 5px solid #00bcd4;
     margin: 1rem 0;
     border-radius: 8px;
+    animation: lightSpeedIn 1s ease-out; /* Animation */
 }
 
 blockquote footer {
@@ -156,6 +174,7 @@ footer {
     color: #e0e0e0; /* Light grey text */
     text-align: center;
     padding: 1rem;
+    animation: fadeInUp 1s ease-out; /* Animation */
 }
 
 footer .social-media {
@@ -177,4 +196,166 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #fff;
+    animation: tada 1s; /* Animation */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    to {
+        transform: perspective(400px) rotateX(0deg);
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes lightSpeedIn {
+    from {
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        transform: skewX(-5deg);
+        opacity: 1;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }
